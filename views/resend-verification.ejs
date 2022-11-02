@@ -1,0 +1,47 @@
+<%- include("./layout/header.ejs") %>
+<h1>Resend Verification Email</h1>
+
+<form method="post">
+  <div>
+    <input
+      type="email"
+      placeholder="Enter email"
+      name="email"
+      size="50"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <a href="/resend-verification">Resend verification link</a>
+  </div>
+  <br />
+  <!-- <div style="color: pink">Please verify your email first</div>
+  <br />
+  <div style="color: blue">Copyright by Praise</div> -->
+</form>
+<%if(typeof message !== "undefined"){%>
+<h3><%=message%></h3>
+<%}%> <%- include("./layout/footer.ejs") %>
+
+<!-- <%- include("./layout/header.ejs") %>
+
+
+<h1>Resend verification email</h1>
+
+<form  method="post">
+  <div>
+    <input
+      type="email"
+      placeholder="Enter email"
+      name="email"
+      size="50"
+      required
+    />
+  </div>
+  <br />
+  
+  <div>
+    <a href="/resend-verification">Resend Verification link</=>
+  </div>
+</form> -->

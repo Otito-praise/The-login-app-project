@@ -1,0 +1,42 @@
+<%- include("./layout/header.ejs") %>
+<h1>User Registration</h1>
+
+<form method="post" enctype="multipart/form-data">
+  <div>
+    <input
+      type="text"
+      placeholder="Enter name"
+      name="name"
+      size="50"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <input
+      type="email"
+      placeholder="Enter email"
+      name="email"
+      size="50"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <input
+      type="password"
+      placeholder="Enter password"
+      name="password"
+      size="50"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <button type="delete">Delete</button>
+  </div>
+</form>
+
+<%if(typeof message !== "undefined"){%>
+<h3><%=message%></h3>
+<%}%> <%- include("./layout/footer.ejs") %>

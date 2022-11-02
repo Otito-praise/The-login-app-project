@@ -1,0 +1,47 @@
+<%- include("./layout/header.ejs") %>
+<h1>Edit Profile</h1>
+
+<form method="post" enctype="multipart/form-data">
+  <div>
+    <input
+      type="text"
+      placeholder="Enter name"
+      name="name"
+      size="50"
+      value="<%=user.name%>"
+      required
+    />
+  </div>
+  <br />
+
+  <input type="hidden" name="user_id" value="<%= user._id%>" />
+
+  <div>
+    <input
+      type="email"
+      placeholder="Enter email"
+      name="email"
+      size="50"
+      value="<%=user.email%>"
+      required
+    />
+  </div>
+  <br />
+  <!-- <div>
+    <input type="file" name="image" required />
+    <img
+      src="images/users/<%=user.image%>"
+      alt="<%=user.name%>"
+      height="150"
+      width="150"
+    />
+  </div> -->
+  <br />
+  <div>
+    <button type="submit">Edit Profile</button>
+  </div>
+</form>
+
+<%if(typeof message !== "undefined"){%>
+<h3><%=message%></h3>
+<%}%> <%- include("./layout/footer.ejs") %>

@@ -1,0 +1,42 @@
+<%- include("./layout/header.ejs") %>
+<h1>User login</h1>
+
+<form action="/loginUser" method="post">
+  <div>
+    <input
+      type="email"
+      placeholder="Enter email"
+      name="email"
+      size="50"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <input
+      type="password"
+      placeholder="Enter password"
+      name="password"
+      size="50"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <button type="submit">login</button>
+  </div>
+  <br />
+  <div>
+    <a href="/resend-verification">Resend verification link</a>
+    <br />
+    <br />
+    <a href="/forget-password">forget password</a>
+  </div>
+  <br />
+  <!-- <div style="color: pink">Please verify your email first</div>
+  <br />
+  <div style="color: blue">Copyright by Praise</div> -->
+</form>
+<%if(typeof message !== "undefined"){%>
+<h3><%=message%></h3>
+<%}%> <%- include("./layout/footer.ejs") %>

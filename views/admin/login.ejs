@@ -1,0 +1,37 @@
+<%- include("../layout/header.ejs") %>
+<h1>Admin Login%</h1>
+
+<form method="post">
+  <div>
+    <input
+      type="email"
+      placeholder="Enter email"
+      name="email"
+      size="50"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <input
+      type="password"
+      placeholder="Enter password"
+      name="password"
+      size="50"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <button type="submit">login</button>
+  </div>
+  <br />
+  <div>
+    <br />
+    <a href="/forget-password">forget password</a>
+  </div>
+  <br />
+</form>
+<%if(typeof message !== "undefined"){%>
+<h3><%=message%></h3>
+<%}%> <%- include("../layout/footer.ejs") %>

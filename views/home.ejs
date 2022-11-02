@@ -1,0 +1,23 @@
+<%- include("./layout/header.ejs") %>
+<h1>User Profile Page</h1>
+<!-- <p><%=user%></p> -->
+<h3><%=user.name%></h3>
+<h3><%=user.email%></h3>
+<img
+  src="images/users/<%=user.image%>"
+  alt="<%=user.name%>"
+  height="150"
+  width="150"
+/>
+
+<br />
+<br />
+<a href="/edit?id=<%=user._id%>">Edith Profile</a>
+<!-- we use the ?query id para to get and and display the users giving details -->
+<br />
+<a href="/delete">Delete Profile</a>
+<br />
+<a href="/logout">logout</a>
+<br />
+<br />
+<%- include("./layout/footer.ejs") %>
